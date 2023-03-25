@@ -1,0 +1,21 @@
+// Flexbox
+.flex {
+	display: flex;
+
+	&.flex-column {
+		flex-direction: column;
+	}
+
+	.flex-grow {
+		flex-grow: 1;
+	}
+
+	.flex-shrink {
+		flex-shrink: 1;
+	}
+}
+
+// Height
+.min-svh-100 {
+	min-height: 100svh;
+}
