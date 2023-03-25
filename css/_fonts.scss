@@ -1,0 +1,47 @@
+// Settings
+$font-folder: "../assets/fonts";
+$font-defaults: (
+	"weight": 400,
+	"style": normal
+);
+
+// Font definitions
+$fonts: (
+	"Poppins": (
+		"BoldItalic": (
+			"path": "poppins-bolditalic-webfont",
+			"weight": 700,
+			"style": italic
+		),
+		"Bold": (
+			"path": "poppins-bold-webfont",
+			"weight": 700
+		),
+		"Light": (
+			"path": "poppins-light-webfont",
+			"weight": 300
+		),
+		"ExtraLight": (
+			"path": "poppins-extralight-webfont",
+			"weight": 200
+		)
+	)
+);
+
+// Font-face declarations
+@each $font-family, $font-types in $fonts {
+	@each $font-type, $font-props in $font-types {
+		$font-props: map-merge($font-defaults, $font-props);
+		@font-face {
+			$font-path: "#{$font-folder}#{map-get($font-props, "path")}";
+			font-family: $font-family;
+			font-weight: map-get($font-props, "weight");
+			font-style: map-get($font-props, "style");
+			src:
+				local("#{$font-family} #{$font-type}"),
+				local("#{$font-family}-#{$font-type}"),
+				url("#{$font-path}.woff2") format("woff2"),
+				url("#{$font-path}.woff") format("woff");
+		}
+	}
+}
