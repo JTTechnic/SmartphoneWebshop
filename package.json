@@ -1,0 +1,25 @@
+{
+  "name": "smartphonewebshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:build": "sass css/style.scss css/style.css --style compressed",
+    "css:watch": "sass --watch css/style.scss css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JTTechnic/SmartphoneWebshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JTTechnic/SmartphoneWebshop/issues"
+  },
+  "homepage": "https://github.com/JTTechnic/SmartphoneWebshop#readme",
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "sass": "^1.60.0"
+  }
+}
